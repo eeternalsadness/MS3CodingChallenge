@@ -40,4 +40,4 @@ Since the application has to read and write a lot of files, there is potential f
 Other Thoughts
 --------------
 
-The application could be programmed so that it is entirely contained in a GUI, but that would take more time and make the code more complex for something that only does a single task. Instead, the application uses a combination of both the console/command line and a GUI, with the console/command line acting as a debugger that tells the user what the application is doing.
+The application could be programmed so that it is entirely contained in a GUI, but that would make the code more complex for something that only does a single task. Instead, the application uses a combination of both the console/command line and a GUI, with the console/command line acting as a debugger that tells the user what the application is doing.
