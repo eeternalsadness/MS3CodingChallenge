@@ -51,7 +51,7 @@ public class GUI{
         int returnVal = fileChooser.showDialog(new JPanel(), "Select Directory");
         if(returnVal == JFileChooser.APPROVE_OPTION){
             //change the default directory
-            dir = fileChooser.getSelectedFile().getPath() + "\\";
+            dir = fileChooser.getSelectedFile().getPath();
             System.out.println("Selected directory: " + dir + "\n");
 
             //change the default path in the config.properties file
@@ -61,7 +61,7 @@ public class GUI{
             //return the current directory if the user did not select one
             System.out.println("You did not select a directory");
             System.out.println("The directory is set to be the default one");
-            dir = defaultPaths.getPath(outputFileType) + "\\";
+            dir = defaultPaths.getPath(outputFileType);
             System.out.println("Default directory: " + dir + "\n");
         }
 
