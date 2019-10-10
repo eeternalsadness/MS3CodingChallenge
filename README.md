@@ -21,13 +21,19 @@ Approach
 --------
 
 1. Overview:
+
 The application reads the data from the CSV file line-by-line and value-by-value, storing each line in an array of Strings. Every time a value is added to the array, it is checked to see if it is empty. If it is, the whole record becomes invalid. This check during parsing helps reduce extra iterations if the records are checked later. After a record is checked, it is immediately put into a valid data table or an invalid data table based on its validity. An SQLite database is then created using the valid data table, and a CSV file is created using the invalid table. A log file is then created using the number of elements in each table.
 
+
 2. Data Structures:
+
 The data structure of a record is a String array of size 10. This works on the assumption that the input file is a table that has its data contained in 10 column, which means that if a row has more than 10 values, only the first 10 will be stored in the array. The decision to use an array instead of an ArrayList (even though the default size of an ArrayList is 10) is for slightly better performance and consistency between the Record objects. 
+
 The data structure of a table holding multiple records is similar to a linked list. Since the main operations of the application are reading and writing data, data should only be accessed sequentially. Hence, a linked list provides superior performance in add operations when populating the data tables, especially for large datasets (since ArrayList has to expand its size every time it overflows). There is no random access, so the sequential performance is similar to that of ArrayList.
 
+
 3. I/O:
+
 Since the application has to read and write a lot of files, there is potential for IO errors. Hence, a file dialog is used to make sure that the files and the directories are valid, eliminating the need for error handling. The application also makes use of a config.properties file that stores the default paths for the output files, in case the user did not specify them. This is done to reduce redundancy in prompting the user for default paths.
 
 
