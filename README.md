@@ -49,7 +49,7 @@ The application reads the data from the CSV file line-by-line and value-by-value
 
 The data structure of a record is a String array of size 10. This works on the assumption that the input file is a table that has its data contained in 10 column, which means that if a row has more than 10 values, only the first 10 will be stored in the array. The decision to use an array instead of an ArrayList (even though the default size of an ArrayList is 10) is for slightly better performance and consistency between the Record objects. 
 
-The data structure of a table holding multiple records is similar to a linked list. Since the main operations of the application are reading and writing data, data should only be accessed sequentially. Hence, a linked list provides superior performance in add operations when populating the data tables, especially for large datasets (since ArrayList has to expand its size every time it overflows). There is no random access, so the sequential performance is similar to that of ArrayList.
+The data structure of a table holding multiple records is similar to a linked list. Since the main operations of the application are reading and writing data, data should only be accessed sequentially. Hence, a linked list provides superior performance in add operations when populating the data tables, especially for large datasets (since ArrayList has to expand its size every time it overflows). There is no random access, so the access performance is similar to that of ArrayList.
 
 
 3. I/O:
