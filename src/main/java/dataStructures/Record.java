@@ -3,7 +3,7 @@
  * Assume no record holds more than 10 values.
  * Data structure is similar to a node in a LinkedList for better sequential performance.
  * The default value for isValid is set to true for simplicity in implementation.
- * The validity of the record is checked upon setting the data to minimize number of steps.
+ * The validity of the record is checked upon setting the data to minimize number of checks.
  */
 
 package dataStructures;
