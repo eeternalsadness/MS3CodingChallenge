@@ -99,7 +99,6 @@ public class SQLiteCreator {
     //create a table using an established connection
     private void createSQLTable(Connection conn){
         //the table should have 10 attributes (A-J)
-
         //create table
         try{
             Statement statement = conn.createStatement();
