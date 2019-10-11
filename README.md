@@ -8,7 +8,9 @@ This application takes an input CSV file that has 10 columns with column headers
 If the user did not specify the output directories, the default directories are:
 
 SQLite database: ./Valid Tables
+
 CSV file: ./Invalid Tables
+
 Log file: ./Logs
 
 Build and Run
