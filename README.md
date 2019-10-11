@@ -49,7 +49,7 @@ The data structure of a table holding multiple records is similar to a linked li
 
 Since the application has to read and write a lot of files, there is potential for IO errors. Hence, a file dialog is used to make sure that the files and the directories are valid, eliminating the need for error handling. The application also makes use of a config.properties file that stores the default paths for the output files, in case the user did not specify them. This is done to reduce redundancy in prompting the user for default paths.
 
-The SQLite queries are also optimized. The application uses a PreparedStatement to queue up the insert statements, only commiting once all the insert statements have been created. This significantly reduces the overhead when auto-committing after every insert statement.
+The biggest performance hit for the application is creating and populating the SQLite database, hence the SQLite queries are optimized. The application uses a PreparedStatement to queue up the insert statements, only commiting once all the insert statements have been created. This significantly reduces the overhead when auto-committing after every insert statement.
 
 Other Thoughts
 --------------
