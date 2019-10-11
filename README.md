@@ -25,7 +25,7 @@ Copy dependency (the application makes use of org.xerial.sqlite-jdbc-3.28.0.jar)
 
 Run:
 
-    java -cp /target/<project-name>.jar; /target/dependency/sqlite-jdbc-3.28.0.jar MainApplication
+    java -cp /target/MS3CodingChallenge-1.0-SNAPSHOT.jar; /target/dependency/sqlite-jdbc-3.28.0.jar MainApplication
     
 A sample CSV file is included in the repository for testing.
 
