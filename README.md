@@ -26,7 +26,7 @@ Build project:
 
     mvn install
     
-Copy dependency (the application makes use of org.xerial.sqlite-jdbc-3.28.0.jar):
+Copy dependency (the application makes use of xerial's sqlite-jdbc API):
 
     mvn dependency:copy-dependencies
 
